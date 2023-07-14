@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>ＣＰＲ到着確認</title>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/all.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/cp.css}" rel="stylesheet">
+<link th:href="@{/css/jquery-ui.structure.min.css}" rel="stylesheet">
+<link th:href="@{/css/jquery-ui.theme.min.css}" rel="stylesheet">
+</head>
+
+<body id="bdy">
+	<!--……ヘッダ開始-->
+	<header>
+		<nav class="navbar" style="height: 75px; margin-bottom: 0.2rem;">
+			<div class="row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-5">
+							<div class="row">
+								<span class="navbar-brand h1"
+									style="vertical-align: top; margin-left: 2.0rem"> <Label
+									class="navbar-brand h1" id="LAB_NM"
+									style="vertical-align: top; margin-left: 2.0rem"
+									th:text="ＣＰＲ到着確認"></Label></span>
+							</div>
+						</div>
+						<div class="col-5 text-left align-self-center">
+							<table>
+								<tr>
+									<td><label class="fs-12">従業員：</label></td>
+									<td><label class="fs-12" style="padding-left: 2rem;"
+										th:text="${EMP_CD} + '&nbsp;&nbsp;' + ${EMP_NM} "></label></td>
+								</tr>
+								<tr>
+									<td><label class="fs-12" id="IP" th:value="${IP}"
+										th:text="IP + ': ' + ${IP}"></label></td>
+									<td><label class="fs-12" style="padding-left: 2rem;"
+										id="NOWDATE">日時</label></td>
+								</tr>
+							</table>
+							<input type="hidden" style="padding-left: 0rem;" id="EMP_CD"
+								th:value="${EMP_CD}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!--……ヘッダ終了-->
+
+	<form name="frm">
+		<table>
+			<tr>
+				<th><a class="blink auto" id="auto"></a></th>
+			</tr>
+		</table>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12">
+					<div class="card p-1">
+						<div class="row">
+							<div class="col-1 pr-2 mb-1">
+								<div class="input-group">
+									<select id="soko" name="soko" class="form-control form-control-sm" 
+										style="height: 26px; font-size: 12px; text-align: left;">
+										<option value="1">1 : 第１倉庫</option>
+										<option value="2">2 : 第２倉庫</option>
+									</select> 
+								</div>
+							</div>
+							<div class="px-0 mb-1" style="max-width: 4%;">
+								<div class="input-group">
+									<input type=number id="STNO" name=stno placeholder="STNO" Size=7
+											maxlength=3 style="height: 26px; font-size: 12px; text-align: left;" 
+											class="form-control form-control-sm fs-12">
+								</div>
+							</div>
+							<div class="pr-2 mb-1" style="max-width: 12%;">
+								<div class="input-group">
+									<select id="cs_as" name="cs_as" class="form-control form-control-sm" 
+										style="height: 26px; font-size: 12px; text-align: left;">
+										<option value="0">0 : ケース・アソート</option>
+										<option value="1">1 : ケースのみ</option>
+										<option value="2">2 : アソートのみ</option>
+										<option value="9">9 : 検品表示なし</option>
+									</select>
+								</div>
+							</div>
+							<div class="pr-2 mb-1"  style="max-width: 12%;">
+								<div class="input-group">
+									<select id="tane" name="tane" class="form-control form-control-sm" 
+										style="height: 26px; font-size: 12px; text-align: left;">
+										<option value="0">0 : 種まき表示する</option>
+										<option value="1">1 : 種まき表示しない</option>
+									</select>
+								</div>
+							</div>
+							<div class="pr-2 mb-1" style="max-width: 15%;">
+								<div class="input-group">
+									<select id="kubun" name="kubun" class="form-control form-control-sm" 
+										style="height: 26px; font-size: 12px; text-align: left;">
+										<option value="0">0 : 全部</option>
+										<option value="1">1 : ホームセンターのみ</option>
+										<option value="2">2 : アマゾンのみ</option>
+										<option value="3">3 : プラザ・Ｌ1Ｍのみ</option>
+									</select> 
+								</div>
+							</div>
+							<div class="px-0 mb-1" style="max-width: 10%;">
+								<div class="input-group">
+									<input id="s_ymd" type=text name=s_ymd size=8 maxlength=8 
+										style="height: 26px; font-size: 12px; text-align: left;"
+										class="form-control form-control-sm fs-12"> 
+								</div>
+							</div>
+							<div class="col-1 px-0 mb-1">
+								<div class="input-group">
+									<input type=button id="SEARCH" value="表示" class="btn btn-primary btn-sm fs-12"> 
+									<input type=button id="STOP" value="自動更新停止" class="btn btn-primary btn-sm fs-12"> 
+									<input type=text name=kbn value="0" style="border: none; display: none" readonly>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<table>
+				<tr>
+					<td><a class="m1">引当置場</a></td>
+					<td><input class="m2" id="hiki" size=6 readonly></td>
+					<td><input class="m2" id="okiba" size=30 readonly></td>
+					<td><a class="m1">設定者</a></td>
+					<td><input class="m2" id="syain" size=6 readonly></td>
+					<td><input class="m2" id="syanm" size=16 readonly></td>
+					<td><a class="m1">ｼﾘｱﾙ№</a></td>
+					<td><input class="m2" id="sno" size=10 readonly></td>
+					<td><a class="m1">設定枚数</a></td>
+				</tr>
+				<tr>
+					<td><a class="m1">得 意 先</a></td>
+					<td><input class="m2" id="tok" size=6 readonly></td>
+					<td><input class="m2" id="toknm" size=30 readonly></td>
+					<td><a class="m1">コメント</a></td>
+					<td colspan=2><input class="m2" id="comm" size=28 readonly></td>
+					<td><a class="m1">棚 番</a></td>
+					<td><input class="m2" id="tana" size=10 readonly></td>
+					<td><input class="m2" id="mai" size=4 readonly></td>
+				</tr>
+			</table>
+		</div>
+	</form>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+	<script th:src="@{/js/tether.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<script th:src="@{/js/jquery-ui.min.js}"></script>
+	<script th:src="@{/js/today.js}"></script>
+	<script th:src="@{/js/Const.js}"></script>
+	<script th:src="@{/js/CP000.js}"></script>
+	<script th:src="@{/js/CP100.js}"></script>
+	<script th:src="@{/js/JsBarcode.all.min.js}"></script>
+</body>
+</html>

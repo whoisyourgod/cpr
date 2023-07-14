@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>異常処理</title>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<link th:href="@{/css/all.css}" rel="stylesheet">
+<link th:href="@{/css/style.css}" rel="stylesheet">
+<link th:href="@{/css/cp.css}" rel="stylesheet">
+<link th:href="@{/css/jquery-ui.structure.min.css}" rel="stylesheet">
+<link th:href="@{/css/jquery-ui.theme.min.css}" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar" style="height: 75px; margin-bottom: 0.2rem;">
+			<div class="row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-5">
+							<div class="row">
+								<span style="vertical-align: top; margin-left: 2.0rem"> <Label
+									class="navbar-brand h1" id="ERROR_INFO"
+									style="vertical-align: top; margin-left: 2.0rem"
+									th:text="エラーが発生しました。システム部へ連絡してください。"></Label></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="row">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-5">
+					<div class="row">
+						<span style="vertical-align: top; margin-left: 2.0rem"> <Label
+							style="vertical-align: top; margin-left: 2.0rem"
+							th:text="${exception.message}"></Label></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

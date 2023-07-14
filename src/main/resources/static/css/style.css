@@ -1,0 +1,391 @@
+/* common */
+body{
+	background-color:#FFFFFF;
+	font-size:0.9rem;
+	color:#000000;
+}
+
+/* shipment_progress */
+.h1{
+	font-size:1.5rem;
+	color:#000000;
+}
+
+.user-name{
+	font-size:0.8rem;
+}
+
+.login-time{
+	font-size:0.8rem;
+}
+
+/* ヘッダ */
+.navbar{
+	margin-bottom:1rem;
+	padding-top:1rem;
+	background-color: #d9edf7;
+	color:#000000;
+}
+
+/* チェックボックスの余白調整 */
+.form-check-input{
+	margin-left:0rem;
+	margin-right:0.5rem;
+}
+
+/* ピッキングリスト出力画面 */
+.control-label.label-h{
+	background-color: #d9edf7;
+	padding:0.5rem;
+	width:100%;
+	text-align:center;
+	font-size:0.75rem;
+}
+
+/* メニュー画面ラベル */
+.control-label.menu{
+	background-color: #d9edf7;
+	display: inline-block;
+	padding-left: 1.0rem;
+	padding-right: 1.0rem;
+	text-align:center;
+	font-size:1.00rem;
+}
+
+/* メニュー画面ボタン */
+.control-btn.menu{
+	background-color: #d9edf7;
+	display: inline-block;
+	padding-left: 1.0rem;
+	padding-right: 1.0rem;
+	text-align:center;
+    font-size: 0.75rem;
+    margin-left:2.0rem;
+    margin-bottom:0.3rem;
+}
+
+/* フォームの表示非表示 */
+#number-wrap{
+	display:none;
+}
+
+/* ロケーション出庫検品 */
+table.data-table-a{
+	margin:0.25rem;
+	border-left:1px solid #CCCCCC;
+	font-size:0.75rem;
+	width:99%;
+}
+
+/* datatable01 */
+
+table.data-table-a th{
+	text-align:center;
+	background-color: #d9edf7;
+	color:#000000;
+	border-top:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-a td{
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-a th.tcol-1,
+table.data-table-a td.tcol-1{
+	width:10%;
+}
+
+table.data-table-a th.tcol-2,
+table.data-table-a td.tcol-2{
+	width:10%;
+}
+
+table.data-table-a th.tcol-3,
+table.data-table-a td.tcol-3{
+	width:29%;
+}
+
+table.data-table-a th.tcol-4,
+table.data-table-a td.tcol-4{
+	width:10%;
+}
+
+table.data-table-a th.tcol-5,
+table.data-table-a td.tcol-5{
+	width:10%;
+}
+
+table.data-table-a th.tcol-6,
+table.data-table-a td.tcol-6{
+	width:10%;
+}
+
+table.data-table-a th.tcol-7,
+table.data-table-a td.tcol-7{
+	width:10%;
+}
+
+table.data-table-a th.tcol-8,
+table.data-table-a td.tcol-8{
+	width:10%;
+}
+
+.datatable01{
+    position:relative;
+    width:99%;
+    height:0;
+    padding-top:16%;
+}
+.datatable01 iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:99%;
+    /*height:190px;*/
+    height:99%;
+}
+
+/* datatable02 */
+
+table.data-table-b th{
+	text-align:center;
+	background-color: #d9edf7;
+	color:#000000;
+	border-top:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-b td{
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-b th.tcol-1,
+table.data-table-b td.tcol-1{
+	width:20%;
+}
+
+table.data-table-b th.tcol-2,
+table.data-table-b td.tcol-2{
+	width:19%;
+}
+
+table.data-table-b th.tcol-3,
+table.data-table-b td.tcol-3{
+	width:10%;
+}
+
+table.data-table-b th.tcol-4,
+table.data-table-b td.tcol-4{
+	width:10%;
+}
+
+table.data-table-b th.tcol-5,
+table.data-table-b td.tcol-5{
+	width:10%;
+}
+
+table.data-table-b th.tcol-6,
+table.data-table-b td.tcol-6{
+	width:10%;
+}
+
+table.data-table-b th.tcol-7,
+table.data-table-b td.tcol-7{
+	width:10%;
+}
+
+table.data-table-b th.tcol-8,
+table.data-table-b td.tcol-8{
+	width:10%;
+}
+
+.datatable02{
+    position:relative;
+    width:99%;
+    height:0;
+    padding-top:16%;
+}
+.datatable02 iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:99%;
+    /*height:190px;*/
+    height:99%;
+}
+
+/* datatable03 */
+table.data-table-c{
+	width:99%;
+	margin:0.4rem;
+	border-left:1px solid #CCCCCC;
+	border-top:1px solid #CCCCCC;
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+
+table.data-table-c th{
+	text-align:center;
+	background-color: #d9edf7;
+	color:#000000;
+	/*border-top:1px solid #CCCCCC;*/
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-c td{
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	padding:0.5rem;
+	vertical-align:middle;
+}
+
+table.data-table-c th.tcol-1,
+table.data-table-c td.tcol-1{
+	width:3%;
+}
+
+table.data-table-c th.tcol-2,
+table.data-table-c td.tcol-2{
+	width:5%;
+}
+
+table.data-table-c th.tcol-3,
+table.data-table-c td.tcol-3{
+	width:20%;
+}
+
+table.data-table-c th.tcol-4,
+table.data-table-c td.tcol-4{
+	width:5%;
+}
+
+table.data-table-c th.tcol-5,
+table.data-table-c td.tcol-5{
+	width:5%;
+}
+
+table.data-table-c th.tcol-6,
+table.data-table-c td.tcol-6{
+	width:5%;
+}
+
+table.data-table-c th.tcol-7,
+table.data-table-c td.tcol-7{
+	width:5%;
+}
+
+table.data-table-c th.tcol-8,
+table.data-table-c td.tcol-8{
+	width:16%;
+}
+
+table.data-table-c th.tcol-9,
+table.data-table-c td.tcol-9{
+	width:8%;
+}
+
+table.data-table-c th.tcol-10,
+table.data-table-c td.tcol-10{
+	width:30%;
+}
+
+
+
+/* datatable04 */
+table.data-table-d{
+	width:99%;
+	margin:0.4rem;
+	border-left:1px solid #CCCCCC;
+}
+
+
+table.data-table-d th{
+	text-align:center;
+	background-color: #d9edf7;
+	color:#000000;
+	border-top:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	padding:0.5rem 0;
+	vertical-align:middle;
+}
+
+table.data-table-d td{
+	border-right:1px solid #CCCCCC;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	padding:0.5rem;
+	vertical-align:middle;
+}
+
+table.data-table-c th.tcol-1,
+table.data-table-c td.tcol-1{
+	width:3%;
+}
+
+table.data-table-c th.tcol-2,
+table.data-table-c td.tcol-2{
+	width:5%;
+}
+
+table.data-table-c th.tcol-3,
+table.data-table-c td.tcol-3{
+	width:20%;
+}
+
+table.data-table-c th.tcol-4,
+table.data-table-c td.tcol-4{
+	width:8%;
+}
+
+table.data-table-c th.tcol-5,
+table.data-table-c td.tcol-5{
+	width:8%;
+}
+
+table.data-table-c th.tcol-6,
+table.data-table-c td.tcol-6{
+	width:5%;
+}
+
+table.data-table-c th.tcol-7,
+table.data-table-c td.tcol-7{
+	width:5%;
+}
+
+table.data-table-c th.tcol-8,
+table.data-table-c td.tcol-8{
+	width:5%;
+}
+
+
+/* 右寄せのプリントボタン */
+.print-btn{
+	margin-left:5rem;
+}
+
+/*  */
+.table-striped-2span tbody tr:nth-of-type(4n+1), .table-striped-2span tbody tr:nth-of-type(4n+2) {
+	background-color: #F2F2F2;
+}
+

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.co.iris.global.mapper.CP100Mapper">
+	<resultMap id="CP10001Data"
+		type="jp.co.iris.global.bean.CP10001Bean">
+		<result column="シリアルNO" property="snNo" />
+		<result column="TOSTNO" property="tostNo" />
+		<result column="TO置場" property="toOki" />
+		<result column="置場名" property="okiNm" />
+		<result column="社員コード" property="empCd" />
+		<result column="社員名" property="empNm" />
+		<result column="設定日時" property="setDate" />
+		<result column="状態コード" property="statusCd" />
+		<result column="JYT" property="jyt" />
+		<result column="備考" property="biko" />
+		<result column="会社コード" property="comCd" />
+		<result column="COMM" property="comm" />
+		<result column="得意先コード" property="tokuCd" />
+		<result column="得意先名" property="tokuNm" />
+		<result column="品質異常NO" property="ijoNo" />
+		<result column="FROM棚番" property="fromTana" />
+		<result column="商品コード" property="shohinCd" />
+		<result column="JANコード" property="janCd" />
+		<result column="商品名" property="shohinNm" />
+		<result column="ロット年" property="lotYear" />
+		<result column="ロット種別" property="lotKbn" />
+		<result column="ケース入数" property="ksHaisu" />
+		<result column="ケース数" property="ksSu" />
+		<result column="数量" property="suryo" />
+		<result column="到着完了日時" property="arrivalEndDate" />
+		<result column="引当数量" property="hikiateSu" />
+	</resultMap>
+
+	<select id="execSCP10001" resultMap="CP10001Data">
+		EXEC SPDB.dbo.SCP10001
+		#{stNo}
+	</select>
+
+	<select id="execSCP10002" resultType="java.lang.Integer">
+		EXEC SPDB.dbo.SCP10002
+		#{stNo}
+	</select>
+
+	<select id="execSCP10003" resultType="java.lang.Integer">
+		EXEC SPDB.dbo.SCP10003
+		#{stNo}
+	</select>
+
+	<select id="execSCP10004" resultType="java.lang.Integer">
+		EXEC SPDB.dbo.SCP10004
+		#{okibaCd}
+		, #{itemCd}
+	</select>
+
+	<resultMap id="CP100Cs"
+		type="jp.co.iris.global.bean.CP100CsBean">
+		<result column="CS_TOTAL" property="cs" />
+		<result column="UNSMEI" property="unsmei" />
+		<result column="CS_UNSMEI" property="csUnsmei" />
+		<result column="TANE_NO" property="taneNo" />
+		<result column="CS_TANE" property="csTane" />
+	</resultMap>
+
+	<select id="execSCP10005" resultMap="CP100Cs">
+		EXEC SPDB.dbo.SCP10005
+		#{ymd}
+		, #{syoCd}
+	</select>
+
+	<resultMap id="CP100As"
+		type="jp.co.iris.global.bean.CP100AsBean">
+		<result column="CS_TOTAL" property="cs" />
+		<result column="UNSMEI" property="unsmei" />
+		<result column="CS_UNSMEI" property="csUnsmei" />
+		<result column="TANE_NO" property="taneNo" />
+		<result column="CS_TANE" property="csTane" />
+	</resultMap>
+
+	<select id="execSCP10006" resultMap="CP100As">
+		EXEC SPDB.dbo.SCP10006
+		#{ymd}
+		, #{syoCd}
+	</select>
+
+	<resultMap id="CP10008Data"
+		type="jp.co.iris.global.bean.CP10008Bean">
+		<result column="DATA_KBN" property="dataKbn" />
+		<result column="KOJOCD" property="kojoCd" />
+		<result column="UNSOCD" property="unsoCd" />
+		<result column="TODOKECD" property="todokeCd" />
+		<result column="CNLF" property="cnlf" />
+		<result column="ITEM_CD" property="itemCd" />
+		<result column="FLD_4" property="fld4" />
+	</resultMap>
+	
+	<select id="execSCP10008" resultMap="CP10008Data">
+		EXEC SPDB.dbo.SCP10008
+		#{SHUKA_DATE}
+		, 6
+		, 0
+		, 624
+		, 0
+		, 666
+		, #{SYOCD}
+	</select>
+
+</mapper>
